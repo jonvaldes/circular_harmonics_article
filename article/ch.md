@@ -1,6 +1,4 @@
-# WIP: 2021-10-12
-
-# Circular Harmonics: What's old is new
+# Circular Harmonics: Digging in circles
 ### By Jon Valdés
 
 Sometimes you discover a nice-looking path through the forest, and you follow
