@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<title>Circular Harmonics: What's old is new</title>
+    	<link rel="stylesheet" type="text/css" href="ch.css">
+
+
+		<script type="module">
+			document.documentElement.classList.remove('no-js');
+			document.documentElement.classList.add('js');
+		</script>
+
+		<meta name="description" content="A circular story about circles">
+
+		<!-- Facebook opengraph -->
+		<meta property="og:title" content="Circular Harmonics">
+		<meta property="og:description" content="A circular story about circles">
+
+		<meta property="og:image" content="images/CircularHarmonicsBands.png">
+		<meta property="og:image:alt" content="CircularHarmonics">
+		<meta property="og:locale" content="en-us">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://valdes.cc/articles/ch.html">
+
+		<!-- Twitter cards -->
+		<meta name="twitter:card" content="A circular story about circles">
+		<meta name="twitter:site" content="valdes.cc">
+		<meta name="twitter:creator" content="Jon Valdés">
+		<meta name="twitter:url" content="https://valdes.cc/articles/ch.html">
+
+		<meta name="twitter:title" content="Circular Harmonics">
+		<meta name="twitter:description" content="A dive into the math of circular harmonics">
+		<meta name="twitter:image" content="images/CircularHarmonicsBands.png">
+
+		<meta name="twitter:image:alt" content="CircularHarmonics">
+		<meta name="twitter:dnt" content="on">
+
+		<!-- OEmbed -->
+		<link rel="alternate" type="application/json+oembed"
+  		  href="https://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&amp;format=json"
+  		  title="oEmbed Profile: JSON">
+		<link rel="alternate" type="text/xml+oembed"
+  		  href="https://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&amp;format=xml"
+  		  title="oEmbed Profile: XML">
+
+		<link rel="canonical" href="https://valdes.cc/articles/ch.html">
+
+		<link rel="icon" href="/favicon.ico">
+
+		<meta name="theme-color" content="#FFFFFF">
+
+		<!-- Force IE 8/9/10 to use its latest rendering engine -->
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	</head>
+	<body>
+  		<div id="content">
+  			CONTENTS
+  		</div>
+		<script>
+			MathJax = {
+  				tex: {
+    				inlineMath: [['$', '$']],
+  				}
+			};
+		</script>
+		<script src="js/polyfill.min.js"></script>
+		<script id="MathJax-script" async src="js/tex-mml-chtml.js"></script>
+	</body>
+	<script>
+		function isInViewport(element) {
+    		const rect = element.getBoundingClientRect();
+    		// Compare rect center against reduced window size
+    		let x = (rect.right + rect.left) / 2;
+    		let y = (rect.bottom + rect.top) / 2;
+    		let hh = (rect.bottom - rect.top) / 2;
+    		let hw = (rect.right - rect.left) / 2;
+
+			let left = -hw;
+			let right = (window.innerHeight || document.documentElement.clientHeight) + hw;
+    		let top = -hh;
+    		let bottom = (window.innerWidth || document.documentElement.clientWidth) + hw;
+
+    		return (
+        		x >= left && x <= right &&
+        		y >= top && y <= bottom
+    		);
+		}
+
+		window.onscroll = function()  {
+			let videoElems = document.getElementsByTagName("video");
+			for (var i=0; i<videoElems.length; i++) {
+				let element = videoElems[i];
+				var visible = isInViewport(element);
+				if (element.paused) {
+					if (visible) {
+						element.play();
+					}
+				}else{
+					if (!visible) {
+						element.pause();
+					}
+				}
+			}
+		};
+
+
+		window.addEventListener('blur', function(){
+			let videoElems = document.getElementsByTagName("video");
+			for (var i=0; i<videoElems.length; i++) {
+				let element = videoElems[i];
+				element.pause();
+			}
+		});
+
+		window.addEventListener('focus', window.onscroll);
+	</script>
+
+</html>
