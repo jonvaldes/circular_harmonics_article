@@ -210,6 +210,7 @@ body h2 {
   line-height: 1.25;
   padding-bottom: calc((1rem / 2) * 1);
   border-bottom: 1px solid var(--background-secondary-alt);
+  padding-top: 0.5em;
 }
 body h3,
 body h4 {
@@ -264,6 +265,14 @@ body p {
 body p img
 {
 	width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body p a img
+{
+	width: 88px;
     display: block;
     margin-left: auto;
     margin-right: auto;

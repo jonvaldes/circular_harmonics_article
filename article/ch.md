@@ -26,7 +26,7 @@ Spherical Harmonics, but in 2D". And so I did the obvious thing: I Googled
 (or, rather, I "duckduckwent") "Circular Harmonics".
 
 And it turns out Circular Harmonics do indeed exist! Sadly, though,
-references to them are quite scarce on the internet (Foreshadowing? Maybe. Keep reading $:-P$ ). Thankfully, I did find
+references to them are quite scarce on the internet (Foreshadowing? Maybe. Keep reading ^_^ ). Thankfully, I did find
 [this article by a developer named
 **blackpawn**](https://blackpawn.com/texts/ch/default.html). At first I found
 it a bit too dense for my feeble and woefully out of shape math-fu, so I
@@ -327,3 +327,7 @@ Animations and images made using the [Nannou](https://nannou.cc/) library.
 
 Thanks to [fmonkey](https://twitter.com/fmonkey) and [txusinho](https://twitter.com/txusinho) for reviewing early drafts of this article.
 
+<br/><br/>
+--- 
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
