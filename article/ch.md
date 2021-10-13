@@ -85,12 +85,12 @@ harmonic basis functions ($B_i$), evaluated at the point we want to reconstruct 
 The basis functions $B_0, B_1, B_2 \ldots$ in CH follow a simple pattern:
   $$
   \frac{1}{\sqrt{2\pi} },
-  \frac{cos(\theta)}{\sqrt{\pi} },
-  \frac{sin(\theta)}{\sqrt{\pi} },
-  \frac{cos(2\theta)}{\sqrt{\pi} },
-  \frac{sin(2\theta)}{\sqrt{\pi} },
-  \frac{cos(3\theta)}{\sqrt{\pi} },
-  \frac{sin(3\theta)}{\sqrt{\pi} },
+  \frac{\cos(\theta)}{\sqrt{\pi} },
+  \frac{\sin(\theta)}{\sqrt{\pi} },
+  \frac{\cos(2\theta)}{\sqrt{\pi} },
+  \frac{\sin(2\theta)}{\sqrt{\pi} },
+  \frac{\cos(3\theta)}{\sqrt{\pi} },
+  \frac{\sin(3\theta)}{\sqrt{\pi} },
   \ldots$$
 
 
@@ -162,7 +162,7 @@ $$w_i = S_i(\theta) - S_i(0)$$
 
 Also, thankfully, the integrals of the $B_i$ terms are very simple:
 
-$$\frac{\theta}{\sqrt{2\pi} }, \frac{sin(\theta)}{\sqrt{\pi} },  \frac{-cos(\theta)}{\sqrt{\pi} }, \frac{sin(2\theta)}{2\sqrt{\pi} }, \frac{-cos(2\theta)}{2\sqrt{\pi} }, \frac{sin(3\theta)}{3\sqrt{\pi} },\frac{-cos(3\theta)}{3\sqrt{\pi} }, \ldots$$
+$$\frac{\theta}{\sqrt{2\pi} }, \frac{\sin(\theta)}{\sqrt{\pi} },  \frac{-\cos(\theta)}{\sqrt{\pi} }, \frac{\sin(2\theta)}{2\sqrt{\pi} }, \frac{-\cos(2\theta)}{2\sqrt{\pi} }, \frac{\sin(3\theta)}{3\sqrt{\pi} },\frac{-\cos(3\theta)}{3\sqrt{\pi} }, \ldots$$
  
 <video muted loop onscroll="onVideoScroll(this)" preload="auto">
   <source src="images/ch_box.webm" type="video/webm">
@@ -179,8 +179,8 @@ This is actually not bad! There's some over/undershooting still (hey, we're tryi
 Another thing I needed was the ability to arbitrarily rotate an SH. Thinking a bit about this, we can see the band $\beta_1$ terms look just like the equation for a circle of $\frac{1}{\sqrt\pi}$ radius
 
 $$
-  \frac{cos(\theta)}{\sqrt{\pi} },
-  \frac{sin(\theta)}{\sqrt{\pi} }
+  \frac{\cos(\theta)}{\sqrt{\pi} },
+  \frac{\sin(\theta)}{\sqrt{\pi} }
 $$
 
 So we can consider the pairs of terms in each band as the horizontal and vertical components of the signal reconstruction. This only really works for band $\beta_1$, though. For the next bands, however, if we look closely we'll see they're all rotationally symmetric, and each band has one more symmetry than the last. We can think of this as the function repeating $N$ times per revolution. And so, if we multiply our $\varphi$ rotation angle by $N$, we can turn a rotation angle of $\varphi = \frac{2\pi}{N}$ into a full $2\pi$ revolution.
@@ -241,7 +241,7 @@ When dealing with Spherical Harmonics, it's typical to run into "ringing artifac
 
 In Circular Harmonics we seem to have a similar problem. We encoded a pulse and a box function as CH, but far from getting a clean approximation to those functions when we evaluate the CH, we're getting a ton of over- and under-shooting around the function.
 
-When dealing with a Fourier series, this is generally called "Gibbs Phenomenon". Peter-Pike Sloan describes it like this in his "[Stupid SH Tricks](http://www.ppsloan.org/publications/StupidSH36.pdf)" article:
+When dealing with a Fourier series, this is generally called "Gibbs Phenomenon". [Peter-Pike Sloan](https://twitter.com/PeterPikeSloan) describes it like this in his "[Stupid SH Tricks](http://www.ppsloan.org/publications/StupidSH36.pdf)" article:
 
 > Ringing, also called Gibbs Phenomenon, is a common problem in signal processing.  When a 
 > signal with a discontinuity is projected into a finite Fourier basis (which can only represent 
@@ -274,12 +274,12 @@ $$S_N(x) = \frac{a_0}{2} + \sum_{n=1}^N\left(a_n\cos\left(nx\right)+b_n\sin\left
 If we look again at our CH basis functions
   $$
   \frac{1}{\sqrt{2\pi} },
-  \frac{cos(\theta)}{\sqrt{\pi} },
-  \frac{sin(\theta)}{\sqrt{\pi} },
-  \frac{cos(2\theta)}{\sqrt{\pi} },
-  \frac{sin(2\theta)}{\sqrt{\pi} },
-  \frac{cos(3\theta)}{\sqrt{\pi} },
-  \frac{sin(3\theta)}{\sqrt{\pi} },
+  \frac{\cos(\theta)}{\sqrt{\pi} },
+  \frac{\sin(\theta)}{\sqrt{\pi} },
+  \frac{\cos(2\theta)}{\sqrt{\pi} },
+  \frac{\sin(2\theta)}{\sqrt{\pi} },
+  \frac{\cos(3\theta)}{\sqrt{\pi} },
+  \frac{\sin(3\theta)}{\sqrt{\pi} },
   \ldots$$
 
 And the equation to evaluate the CH
