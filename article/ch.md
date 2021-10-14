@@ -1,5 +1,5 @@
 # Circular Harmonics: Digging in circles
-### By Jon Valdés
+### By Jon Valdés - (2021-10-12)
 
 Sometimes you discover a nice-looking path through the forest, and you follow
 it thinking it'll lead you to some new, exciting place. But as you walk and walk
@@ -315,6 +315,13 @@ Still, this served me to get a better understanding of how Fourier series work, 
 
 
 I hope you enjoyed the ride, and got something useful out of this :)
+
+
+## *Update* (2021-10-14)
+
+After releasing this article, Hacker News user *heisenzombie* posted a comment saying CH are a very common tool when designing and testing particle accelerators (!!)
+
+Source: [https://news.ycombinator.com/item?id=28853636](https://news.ycombinator.com/item?id=28853636)
 
 
 ## Resources
